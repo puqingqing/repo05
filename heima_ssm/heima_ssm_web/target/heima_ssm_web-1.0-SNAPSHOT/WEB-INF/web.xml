@@ -30,13 +30,25 @@
   </filter-mapping>
    <!--解决中文乱码的结束-->
 
+
+
+  <!--配置spring-security的用户与角色的配置-->
+  <filter>
+    <filter-name>springSecurityFilterChain</filter-name>
+    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>springSecurityFilterChain</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
   <!--整合spring的配置-->
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>classpath:ApplicationContext.xml</param-value>
+    <param-value>classpath*:ApplicationContext.xml,classpath*:spring-security02.xml</param-value>
   </context-param>
   <!--整合结束-->
 

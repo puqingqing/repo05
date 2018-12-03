@@ -313,14 +313,17 @@
                         <div class="form-group form-inline">
                             总共${pages.pages} 页，共${pages.total}条数据。 每页
                             <select class="form-control" onchange="changePageSize()" id="changePageSize">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
+                                <option <c:if test="${pages.pageSize==1}"> selected</c:if>>1</option>
+                                <option <c:if test="${pages.pageSize==2}"> selected</c:if>>2</option>
+                                <option <c:if test="${pages.pageSize==3}"> selected</c:if>>3</option>
+                                <option <c:if test="${pages.pageSize==4}"> selected</c:if>>4</option>
+                                <option <c:if test="${pages.pageSize==5}"> selected</c:if>>5</option>
                             </select> 条
                         </div>
                     </div>
+
+
+
 
                     <div class="box-tools pull-right">
                         <ul class="pagination">
