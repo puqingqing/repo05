@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Permission01 {
     private String id; //无意义，主键uuid
-    private String permissionName;//权限名
+    private String permissionName;//权限名permissionName
     private String url; //资源路径
 
     private List<Role> roles;

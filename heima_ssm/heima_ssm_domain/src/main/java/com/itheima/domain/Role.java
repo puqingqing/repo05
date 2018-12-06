@@ -7,7 +7,7 @@ public class Role {
     private String id; //无意义，主键uuid
     private String roleName;//角色名
     private String roleDesc;//角色描述
-    private List<Permission01> permissiones;//权限集合
+    private List<Permission01> permissiones;//权限集合permissions
     private List<UserInfo> users;//用户集合
 
     public String getId() {

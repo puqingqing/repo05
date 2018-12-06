@@ -5,6 +5,7 @@ import com.itheima.domain.Orders;
 import com.itheima.ssm.service.IOrdersService;
 import org.apache.ibatis.annotations.Result;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,6 +37,7 @@ public class OrdersController {
      * @return
      */
     @RequestMapping("/findAll")
+    @Secured("ROLE_USER")
     public String findAll(@RequestParam(name="page",required = true,defaultValue = "1")int page,
                           @RequestParam(name="size",required = true,defaultValue = "4")int size, Model model){
 
